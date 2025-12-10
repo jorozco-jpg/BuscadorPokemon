@@ -23,13 +23,13 @@ function Card({ searchPokemon }: props) {
   
   return (
     <div style={{border: "2px solid yellow", width: "725px", height: "100vh"}} className="Ventana Infomracion">
-      <h2 style={{border: "2px solid #1c76c5", width:'fit-content',  margin: 'auto'}}>Nombre Pokemon: {pokemon.nombre}</h2>
+      <h2 style={{border: "5px solid white", width:'fit-content',  margin: 'auto'}}>Nombre Pokemon: {pokemon.nombre}</h2>
       <img src={pokemon.imgrute} style={{border: "5px solid white"}}/>
       <h3 style={{border: "5px solid white",  width:'fit-content',  margin: 'auto'}}>Tipo: {pokemon.tipo}</h3>
       <h3 style={{border: "5px solid white", width:'fit-content',  margin: 'auto'}}>Peso: {pokemon.peso} </h3>
       <h3 style={{border: "5px solid white", width:'fit-content',  margin: 'auto'}}>Altura: {pokemon.altura} </h3>
       
-      <div style={{border: "2px solid yellow", width:"100%", textAlign: 'center', borderRadius: '20%'}}>
+      <div style={{border: "2px solid yellow", width:"70%", textAlign: 'center', borderRadius: '20%', margin: 'auto'}}>
       <h3>Estadísticas Base:</h3>
       <h3 style={{border: "5px solid white", width:'fit-content',  margin: 'auto'}}>Hp: {pokemon.hp} </h3>
       <h3 style={{border: "5px solid white", width:'fit-content',  margin: 'auto'}}>Attack: {pokemon.attack} </h3>

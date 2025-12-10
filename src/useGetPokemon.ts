@@ -22,7 +22,7 @@ export function useGetPokemon( input: string) {
       let URL = "https://pokeapi.co/api/v2/pokemon/";
 
       URL = URL + input;
-      const PokemonJS = await fetch(URL).then((response) => response.json().catch(() => console.log("Pokemon no encontrado")));
+      const PokemonJS = await fetch(URL).then((response) => response.json().catch(() => alert("Pokemon no encontrado")));
 
       setpokemon({
         imgrute: PokemonJS.sprites.front_default, 
