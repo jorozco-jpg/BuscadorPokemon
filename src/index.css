@@ -15,7 +15,7 @@
   --links: #0076d1;
   --focus: #0096bfab;
   --border: #dbdbdb;
-  --code: #000;
+  --code: #7b4141;
   --animation-duration: 0.1s;
   --button-base: #d0cfcf;
   --button-hover: #9b9b9b;
@@ -115,7 +115,7 @@ body {
   margin: 20px auto;
   padding: 0 10px;
   word-wrap: break-word;
-  color: #363636;
+  color: #aaaf03;
   color: var(--text-main);
   background: #fff;
   background: var(--background-body);

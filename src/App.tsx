@@ -1,17 +1,28 @@
 import React, { useState } from "react";
 import "./App.css";
 import Card from "./Card";
+import CardGenerica from "./CardGenerica";
+//import { CardGenerica } from "./CardGenerica";
 
 function App() {
   const [PokeName, setPokename] = useState("");
   const [PokeNameSearch, setPokenameSearch] = useState("");
 
-  const [info, setinfo] = useState(false);
+  const [showCard, setshowCard] = useState(false);
+  const [showCardGeneric, setshowCardGeneric] = useState(true);
 
   const handlechange = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setinfo(true);
-    setPokenameSearch(PokeName);
+    if(PokeName===''){
+      alert('No puede realizar una búsqueda vacía')
+      setshowCard(false);
+      setshowCardGeneric(true);
+    }else{
+      setshowCard(true);
+      setshowCardGeneric(false);
+      setPokenameSearch(PokeName);
+    }
+    
   };
 
   return (
@@ -25,16 +36,21 @@ function App() {
                 value={PokeName}
                 onChange={(e) => {
                   setPokename(e.target.value);
+                  setshowCardGeneric(true);
+                  setshowCard(false);
                 }}
               />
+
               <button type="submit">Buscar Pokemon!</button>
             </label>
           </form>
 
-          {info && (<Card searchPokemon={PokeNameSearch} />)}
+          {showCard && (<Card searchPokemon={PokeNameSearch} />)}
 
         </div>
       </header>
+
+          {showCardGeneric && <CardGenerica/>}
     </>
   );
 }
